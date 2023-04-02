@@ -1,4 +1,4 @@
 # IfcDb
 
 ## Description
-Library to store IFC-files into SQL-database
+Library that allows to parse and store IFC-files into SQL-database
