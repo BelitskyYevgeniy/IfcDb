@@ -6,16 +6,22 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>IfcDb</Title>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>BelitskyYevgeniy</Authors>
     <Company>BelitskyYevgeniy</Company>
-    <Description>Library that allows to parse and store IFC-files into SQL-database</Description>
+    <Description>Library that allows you to parse IFC-files and store it into SQL-database</Description>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/BelitskyYevgeniy/IfcDb</RepositoryUrl>
     <PackageTags>IFC, EntityFrameworkCore</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
     <None Include="..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>

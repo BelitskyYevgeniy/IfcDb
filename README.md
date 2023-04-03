@@ -1,10 +1,11 @@
 # IfcDb
 
 ## Description
-Library that allows to parse and store IFC-files into SQL-database
+Library that allows you to parse and store IFC-files into SQL-database
 
 ## Releases
-https://www.nuget.org/packages/IfcDb/1.0.0
+- [1.0.0](https://www.nuget.org/packages/IfcDb/1.0.0)
+- [1.0.1](https://www.nuget.org/packages/IfcDb/1.0.1)
 
 ## Example
 - [Client](https://github.com/BelitskyYevgeniy/IfcDbExampleClient)
