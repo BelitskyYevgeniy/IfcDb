@@ -22,7 +22,7 @@ namespace IfcDb.Parsers
                 @"(?<ent>^#\d+$)",
                 @"(?<enum>^\..+\.$)",
                 @"(?<list>^\((.+,)*.*\)$)",
-                @"(?<obj>^(#\d+\s?=\s?)?\w+\(.+\);?$)"
+                @"(?<obj>^(#\d+=)?\w+\(.+\);?$)"
             };
             var pattern = string.Join("|", patterns);
             var reg = new Regex(pattern);
@@ -114,7 +114,7 @@ namespace IfcDb.Parsers
 
         public IfcObj ParseObj(string str)
         {
-            var pattern = @"#(?<id>\d+)\s?=\s?(?<ifcobj>\w+)\((?<attr>,?.+)\);?";
+            var pattern = @"#(?<id>\d+)\s*=\s*(?<ifcobj>\w+)\s*\((?<attr>,?.+)\);?";
             var reg = new Regex(pattern);
             Match m = null;
             IfcObj res = null;
@@ -130,7 +130,7 @@ namespace IfcDb.Parsers
                 return res;
             }
 
-            pattern = @"(?<ifcobj>\w+)\((?<attr>,?.+)\);?";
+            pattern = @"(?<ifcobj>\w+)\s*\((?<attr>,?.+)\);?";
             var reg2 = new Regex(pattern);
             if (!reg2.IsMatch(str))
             {
@@ -181,7 +181,7 @@ namespace IfcDb.Parsers
                 case IfcAttributeType.Obj:
                     var obj = ParseObj(value);
                     obj.Destination = IfcObjDestination.Data;
-                    result.Value = obj; 
+                    result.Value = obj;
                     break;
             }
             return result;
